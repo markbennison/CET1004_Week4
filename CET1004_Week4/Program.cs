@@ -8,7 +8,7 @@
 
 			do
 			{
-				
+				Console.Clear();
 				menuOption = Menus.GetMainMenuOption();
 
 				switch (menuOption)
