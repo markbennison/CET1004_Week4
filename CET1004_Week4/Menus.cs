@@ -12,7 +12,7 @@ namespace CET1004_Week4
 		public static int GetMainMenuOption()
 		{
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("\n\n {0} \n\n", Assembly.GetCallingAssembly().GetName().Name);
+			Console.WriteLine("{0} \n", Assembly.GetCallingAssembly().GetName().Name);
 			Console.ForegroundColor = ConsoleColor.White;
 
 			Console.WriteLine("(1) Exercise 1");
@@ -21,7 +21,7 @@ namespace CET1004_Week4
 			Console.WriteLine("(4) Exercise 4");
 			Console.WriteLine("(5) Exercise 5");
 
-			Console.WriteLine("(0) Exit");
+			Console.WriteLine("(0) Exit\n");
 
 			int input = Convert.ToInt32(Console.ReadLine());
 

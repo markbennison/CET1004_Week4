@@ -24,9 +24,11 @@
 		}
 		static void Exercise1()
 		{
+			Console.Clear();
+			Console.WriteLine("Exercise 1: Add two numbers");
+			
 			double num1, num2, sum;
 
-			Console.WriteLine("Exercise 1: Add two numbers");
 			Console.WriteLine("Enter the first number: ");
 			num1 = Convert.ToDouble(Console.ReadLine());
 			Console.WriteLine("Enter the second number: ");
@@ -40,34 +42,36 @@
 
 		static void Exercise4()
 		{
+			Console.Clear();
+			Console.WriteLine("Exercise 4: Battery Management");
 			int iBatteryAmount = 50;
 			Console.WriteLine("Battery level is: {0}%", iBatteryAmount);
 			char input;
 
 			do
 			{
-				Console.WriteLine("Would you like to [c]harge or [u]se the battery?");
+				Console.WriteLine("\nWould you like to [c]harge or [u]se the battery?");
 				input = Console.ReadKey().KeyChar;
+				Console.WriteLine("");
 
 				switch (input)
 				{
 					case 'c':
-						Console.Write("\nEnter how much to charge: ");
+						Console.Write("Enter how much to charge: ");
 						int chargeAmount = Convert.ToInt32(Console.ReadLine());
 						ChargeBattery(ref iBatteryAmount, chargeAmount);
 						break;
 					case 'u':
-						Console.Write("\nEnter how much battery to use (e.g. 10 or 20): ");
+						Console.Write("Enter how much battery to use (e.g. 10 or 20): ");
 						int useAmount = Convert.ToInt32(Console.ReadLine());
 						UseBattery(ref iBatteryAmount, useAmount);
 						break;
 					default:
-						Console.WriteLine("\nInvalid input.");
+						Console.WriteLine("Invalid input.");
 						break;
 				}
 
-				Console.Clear();
-				Console.WriteLine("\n\nBattery level is: {0}%", iBatteryAmount);
+				Console.WriteLine("\nBattery level is: {0}%", iBatteryAmount);
 			} while (input != '0');
 		}
 
@@ -79,7 +83,7 @@
 				batteryLevel = 100;
 			}
 
-			Console.WriteLine("Battery level is: {0}%", batteryLevel);
+			//Console.WriteLine("Battery level is: {0}%", batteryLevel);
 		}
 
 		static void UseBattery(ref int batteryLevel, int useAmount)
@@ -90,7 +94,7 @@
 				batteryLevel = 0;
 			}
 
-			Console.WriteLine("Battery level is: {0}%", batteryLevel);
+			//Console.WriteLine("Battery level is: {0}%", batteryLevel);
 
 		}
 
