@@ -34,6 +34,7 @@
 
 			sum = AddNumbers(num1, num2);
 			Console.WriteLine("The total = {0}", sum);
+			Console.ReadKey();
 
 		}
 
